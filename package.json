@@ -1,6 +1,6 @@
 {
-  "name": "CD24",
-  "displayName": "CD24 Support",
+  "name": "cd24-syntax-highlighting",
+  "displayName": "CD24-Syntax-Highlighting",
   "description": "",
   "version": "0.0.1",
   "engines": {
