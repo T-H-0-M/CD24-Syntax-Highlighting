@@ -33,6 +33,14 @@
       }
     ]
   },
+  "semanticTokenTypes": [
+    {
+      "id": "customType",
+      "superType": "type",
+      "description": "Custom type in CD24"
+    }
+  ],
+  "semanticTokenModifiers": [],
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",

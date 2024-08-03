@@ -1,7 +1,7 @@
 {
     "comments": {
-        "lineComment": "--",
-        "blockComment": ["/*", "*/"]
+        "lineComment": "/--",
+        "blockComment": [ "/**", "**/" ]
     },
     "brackets": [
         ["{", "}"],
@@ -12,12 +12,12 @@
         { "open": "{", "close": "}" },
         { "open": "[", "close": "]" },
         { "open": "(", "close": ")" },
-        { "open": "\"", "close": "\"" }
+        { "open": "\"", "close": "\"", "notIn": ["string"] }
     ],
     "surroundingPairs": [
-        { "open": "{", "close": "}" },
-        { "open": "[", "close": "]" },
-        { "open": "(", "close": ")" },
-        { "open": "\"", "close": "\"" }
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"],
+        ["\"", "\""]
     ]
 }
