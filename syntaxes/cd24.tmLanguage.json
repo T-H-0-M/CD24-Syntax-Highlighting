@@ -1,0 +1,97 @@
+{
+  "name": "CD24",
+  "scopeName": "source.cd24",
+  "fileTypes": ["cd"],
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#functions"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.cd24",
+          "match": "\\b(CD24|constants|typedef|def|arraydef|main|begin|end|array|of|func|void|const|for|repeat|until|do|while|if|else|elif|switch|case|default|input|print|printline|return|not|and|or|xor)\\b"
+        },
+        {
+          "name": "storage.type.cd24",
+          "match": "\\b(int|float|bool)\\b"
+        },
+        {
+          "name": "constant.language.cd24",
+          "match": "\\b(true|false)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.cd24",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.cd24",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.cd24",
+          "match": "/--.*$"
+        },
+        {
+          "name": "comment.block.cd24",
+          "begin": "/\\*\\*",
+          "end": "\\*\\*/",
+          "patterns": [
+            {
+              "name": "keyword.other.documentation.cd24",
+              "match": "@\\w+"
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.integer.cd24",
+          "match": "\\b\\d+\\b"
+        },
+        {
+          "name": "constant.numeric.float.cd24",
+          "match": "\\b\\d+\\.\\d*\\b"
+        }
+      ]
+    },
+    "operators": {
+      "name": "keyword.operator.cd24",
+      "match": "([+\\-*/%^=<>!&|]=?|==|!=|<=|>=)"
+    },
+    "functions": {
+      "name": "entity.name.function.cd24",
+      "match": "\\b(func)\\s+(\\w+)\\b",
+      "captures": {
+        "1": { "name": "storage.type.function.cd24" },
+        "2": { "name": "entity.name.function.cd24" }
+      }
+    }
+  }
+}
